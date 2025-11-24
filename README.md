@@ -18,7 +18,7 @@ I un dia, sense adonar-te’n, descobreixes que **ja no ets el mateix júnior qu
 
 # Tasques del projecta
 
-[T01: DRP: còpies de seguretat. Estudi cas client](tasca01/readme.md)
+[T01: DRP: còpies de seguretat. Estudi cas client](Tasca01/readme.MD)
 
 [T02: DPR: còpies de seguretat. Cas pràctic](t2/readme.md)
 
