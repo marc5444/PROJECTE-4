@@ -20,40 +20,40 @@ I un dia, sense adonar-te’n, descobreixes que **ja no ets el mateix júnior qu
 
 [T01: DRP: còpies de seguretat. Estudi cas client](Tasca01/readme.MD)
 
-[T02: DPR: còpies de seguretat. Cas pràctic](t2/readme.md)
+[T02: DPR: còpies de seguretat. Cas pràctic](Tasca02/readme.MD)
 
-[T03: Pla de recuperació davant desastres: imatges del sistema](t3/readme.md)
+[T03: Pla de recuperació davant desastres: imatges del sistema](Tasca03/readme.MD)
 
-[T04: Accés remot](t4/readme.md)
+[T04: Accés remot](Tasca04/readme.MD)
 
-[T05: Accés Remot. Connexió via SSH](t5/readme.md)
+[T05: Accés Remot. Connexió via SSH](Tasca05/readme.MD)
 
-[T06: Accés remot. Escriptori remot (RDP)](t6/readme.md)
+[T06: Accés remot. Escriptori remot (RDP)](Tasca06/readme.MD)
 
-[T07: Accés remot. Serveis d’assistència remota](t7/readme.md)
+[T07: Accés remot. Serveis d’assistència remota](Tasca07/readme.MD)
 
-[T08: Auditoria de Qualitat i Estandardització de Servidors](t8/readme.md)
+[T08: Auditoria de Qualitat i Estandardització de Servidors](Tasca08/readme.MD)
 
-[T09: Servidor fitxers Linux](t9/readme.md)
+[T09: Servidor fitxers Linux](Tasca09/readme.MD)
 
-[T10: Servidor impressió Linux. CUPS](t10/readme.md)
+[T10: Servidor impressió Linux. CUPS](Tasca10/readme.MD)
 
-[T11: Introducció a Figma: nocions bàsiques de disseny d’interfícies](t11/readme.md)
+[T11: Introducció a Figma: nocions bàsiques de disseny d’interfícies](Tasca11/readme.MD)
 
-[T12: Fonaments del Disseny Web Comercial: Landing Page + Procés de Checkout](t12/readme.md)
+[T12: Fonaments del Disseny Web Comercial: Landing Page + Procés de Checkout](Tasca12/readme.MD)
 
-[T13: Disseny d’un E-commerce en Figma (Landing Page + Checkout)](t13/readme.md)
+[T13: Disseny d’un E-commerce en Figma (Landing Page + Checkout)](Tasca13/readme.MD)
 
-[T14: Sostenibilitat. Prova Escrita](t14/readme.md)
+[T14: Sostenibilitat. Prova Escrita](Tasca14/readme.MD)
 
-[T15: Com de circular és la meva família professional?](t15/readme.md)
+[T15: Com de circular és la meva família professional?](Tasca15/readme.MD)
 
 ---
 
 # Producte final
 
-[P01: GitHub. Treballant de forma col·laborativa: forks i pull request.](p1/readme.md)
+[P01: GitHub. Treballant de forma col·laborativa: forks i pull request.](P01/readme.MD)
 
-[P02: Presentació i Projecció de la Maqueta al Client](p2/readme.md)
+[P02: Presentació i Projecció de la Maqueta al Client](P02/readme.MD)
 
-[P03: Kanban del projecte](p3/readme.md)
+[P03: Kanban del projecte](P03/readme.MD)
