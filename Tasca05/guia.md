@@ -30,7 +30,7 @@ systemctl start ssh
 
 Un cop que podem veure tal i com surt a la foto podrem seguir amb el seguent pas
 
-![image](img/Tasca05_102.png)
+systemctl status ssh
 
 ![image](img/Tasca05_103.png)
 
@@ -42,7 +42,7 @@ Un cop que executem aquesta comanda veurem el seguent:
 
 comanda per veure la ip
 
-
+![image](img/Tasca05_103.png)
 ![image](img/Tasca05_104.png)
 
 Ara el seguent pas sera fer la conexio per ssh, en aquest cas ho farem desde una maquina windows, això ho farem amb la seguent comanda
