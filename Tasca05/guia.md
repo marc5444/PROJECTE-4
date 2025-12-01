@@ -53,7 +53,7 @@ ssh usuari@192.168.56.101
 
 Ens sortira un missatge com aquest en el qual haurem de escriure "yes" per poder continuar.
 
-![image](img/Tasca05_104.png)
+![image](img/Tasca05_105.png)
 
 Un cop dins en demanara la contrasenya del usuari
 
