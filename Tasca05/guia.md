@@ -89,6 +89,8 @@ ssh root@192.168.56.101
 
 Inicar sessio amb el root
 
+![image](img/Tasca05_111.png)
+
 Ara que ja hem comprobat que podem accedir amb l'usuari root per ssh modificarem l'arxiu de configuració per poder afegir una capa de protecció.
 
 Per començar tornarem al arxiu de configuració
