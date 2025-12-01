@@ -7,6 +7,7 @@ SSH linux
 Un cop que hem instalat la maquina ubuntu colocarem la seguent comanda per poder actualitzar el sistema
 
 sudo apt update && sudo apt upgrade -y 
+![image](img/Tasca05_100.png)
 
 Important
 
