@@ -49,11 +49,11 @@ Ara el seguent pas sera fer la conexio per ssh, en aquest cas ho farem desde una
 
 ssh usuari@192.168.56.101
 
-![image](img/Tasca05_104.png)
+
 
 Ens sortira un missatge com aquest en el qual haurem de escriure "yes" per poder continuar.
 
-missatge de ssh
+![image](img/Tasca05_104.png)
 
 Un cop dins en demanara la contrasenya del usuari
 
