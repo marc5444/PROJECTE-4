@@ -37,6 +37,8 @@ Un cop que executem aquesta comanda veurem el seguent:
 
 comanda per veure la ip
 
+Tasca05_200
+
 Ara el seguent pas sera fer la conexio per ssh, en aquest cas ho farem desde una maquina windows, això ho farem amb la seguent comanda
 
 ssh usuari@192.168.56.101
