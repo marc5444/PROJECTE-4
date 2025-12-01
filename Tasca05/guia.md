@@ -61,11 +61,11 @@ colocar la contrasenya
 
 Un cop que ja estem dins de la maquina el seguent pas que farem sera modificar l'arxiu de configuració, per poder editar-lo primer escriurem la seguent comanda
 
-sudo nano /etc/ssh/sshd_config
+![image](img/Tasca05_107.png)
 
 Editarem l'arxiu perque quedi de la seguent forma
 
-![image](img/Tasca05_106.png)
+![image](img/Tasca05_108.png)
 
 editar l'arxiu de conf
 
