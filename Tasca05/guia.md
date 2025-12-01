@@ -153,14 +153,14 @@ ssh-keygen -t rsa
 
 Un cop escrita la comanda farem enter fins que vellem algo semblant a la foto
 
-foto del keygen
+![image](img/Tasca05_117.png)
 
 El seguent pas sera fer ls a la ruta on s'ha guardat, la ruta per defecta ens surt on la comanda d'avans, en el meu cas sera la seguent
 
 ls C:\Users\cfgm2smxb19\.ssh
 Podrem veure algo com això
 
-comanda ls
+![image](img/Tasca05_118.png)
 
 I per ultim la seguent comanda sera
 
