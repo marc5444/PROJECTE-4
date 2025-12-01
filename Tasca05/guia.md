@@ -103,6 +103,8 @@ Per fer això podem modificar l'arxiu tal i com es veu a la foto
 
 editar l'arxiu de conf
 
+![image](img/Tasca05_112.png)
+
 Per poder comprobar que funciona correctament crearem un segon usuari amb la seguent comanda
 
 useradd -m -s /bin/bash usuari2
