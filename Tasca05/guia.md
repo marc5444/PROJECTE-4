@@ -37,7 +37,8 @@ Un cop que executem aquesta comanda veurem el seguent:
 
 comanda per veure la ip
 
-Tasca05_200
+
+![image](img/Tasca05_104.png)
 
 Ara el seguent pas sera fer la conexio per ssh, en aquest cas ho farem desde una maquina windows, això ho farem amb la seguent comanda
 
