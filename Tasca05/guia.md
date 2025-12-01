@@ -25,6 +25,7 @@ Si el ssh no esta activat, el podem activar amb la seguent comanda
 
 systemctl start ssh
 
+![image](img/Tasca05_102.png)
 
 
 Un cop que podem veure tal i com surt a la foto podrem seguir amb el seguent pas
