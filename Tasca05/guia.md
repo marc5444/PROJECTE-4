@@ -19,15 +19,15 @@ Si no hem instalat el ssh durant la instalacio de ubuntu farem la seguent comand
 
 Un cop que ja tenim instlat el ssh comprovarem si esta activat amb la seguent comanda
 
-![image](img/Tasca05_102.png)
+systemctl status ssh
 
 Si el ssh no esta activat, el podem activar amb la seguent comanda
 
-![image](img/Tasca05_103.png)
+![image](img/Tasca05_102.png)
 
 Un cop que podem veure tal i com surt a la foto podrem seguir amb el seguent pas
 
-![image](img/Tasca05_104.png)
+![image](img/Tasca05_103.png)
 
 Un cop que ja tenim instalat el ssh el seguent pas sera veure la nostre ip amb la seguent comanda
 
