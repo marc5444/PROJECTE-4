@@ -179,18 +179,24 @@ I per començar farem les haurem de crear la carpeta ssh i un arxiu dins de la c
 Això ho farem de la seguent manera
 
 mkdir .ssh
+
 touch .ssh/authorized_keys
+
 A continuació farem servir la comanda ls amb la ruta que hem especificat previament, en el meu cas és
 
 ls /home/usuari
+
 En la qual podrem veure un archiu anomenat id_rsa.pub
 
 El seguent pas sera veure que hi ha dins de l'arxiu, això ho farem amb la seguent comanda
 
 cat /home/usuari/id_rsa.pub
+
 Podrem veure el segunet
 
-comanda cat
+![image](img/Tasca05_120.png)
+
+
 
 Com a ultim pas sera fer la seguent comanda
 
