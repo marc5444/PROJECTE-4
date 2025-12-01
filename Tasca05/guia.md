@@ -65,6 +65,8 @@ sudo nano /etc/ssh/sshd_config
 
 Editarem l'arxiu perque quedi de la seguent forma
 
+![image](img/Tasca05_106.png)
+
 editar l'arxiu de conf
 
 Una de les configuracions que hem fet és habilitar que el poguis fer servir l'usuari root per fer ssh, per per poder fer primer haurem d'habilitar l'usuari root cosa que ho farem de la seguent forma.
