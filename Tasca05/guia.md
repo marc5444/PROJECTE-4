@@ -73,11 +73,11 @@ Una de les configuracions que hem fet és habilitar que el poguis fer servir l'u
 
 Per poder fer això neccesitarem colocar una contrasenya al root, per fer això ho escriurem amb la seguent comanda
 
-passwd root
+![image](img/Tasca05_109.png)
 
 Un cop fet aixó ens demana la contrasenya.
 
-contrasenya del root
+![image](img/Tasca05_110.png)
 
 Avans de continuar haurem de reinicar el servei amb la seguent comanda
 
