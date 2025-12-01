@@ -201,7 +201,8 @@ Podrem veure el segunet
 Com a ultim pas sera fer la seguent comanda
 
 cat /home/usuari/id_rsa.pub >> .ssh/authorized_keys
-comanda cat
+
+![image](img/Tasca05_121.png)
 
 Per acabar comprobarem que tot funciona correctament
 
