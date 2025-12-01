@@ -113,7 +113,7 @@ Avans de comprobar si funciona haurem de colocar una contrasenya en el usuari2,q
 
 passwd usuari2
 
-Coloquem la contrasenya
+![image](img/Tasca05_113.png)
 
 Tot seguit comprobarem si podem realitzar ssh amb usuari2, per fer això farem la seguent comanda:
 
@@ -121,7 +121,7 @@ ssh usuari2@192.168.56.101
 
 Si intentem inicar sessio amb usuari2 per ssh podem veure que no es pot
 
-Fer ssh usuari2
+![image](img/Tasca05_114.png)
 
 Tambe hem canviar l'arxiu fent que l'usuari root no pogui inicar sesio per ssh però si que pot fer login per local, per comprobar això primer intentarem fer ssh amb l'usuari root amb la segunet comanda
 
@@ -129,19 +129,21 @@ ssh root@192.168.56.101
 
 I podem veure que ens dona error.
 
-Fer ssh amb root
+![image](img/Tasca05_115.png)
+
+
 
 En canvi si ho fem en local amb la comanda login podem veure que si que podrem inicar sessio, això ho farem amb la seguent comanda:
 
 login root
 
-login amb root
+![image](img/Tasca05_116.png)
 
 Per tant podem confirmar que l'arxiu de configuració que hem editat previament funciona correctament.
 
 Mentre que amb usuari si que podem fer ssh
 
-ssh amb usuari
+![image](img/Tasca05_106.png)
 
 Ara com ultim pas el que farem sera accedir amb un certificat en lloc de tindre que fer servir l'usuari i contrasenya
 
