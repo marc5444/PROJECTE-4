@@ -165,9 +165,10 @@ Podrem veure algo com això
 I per ultim la seguent comanda sera
 
 scp C:\Users\cfgm2smxb19\.ssh\id_rsa.pub usuari@192.168.56.101:/home/usuari
+
 Podrem veure una cosa com la seguent
 
-comanda scp
+![image](img/Tasca05_119.png)
 
 Un cop acabat això anirem al servidor ubuntu
 
