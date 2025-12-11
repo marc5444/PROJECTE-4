@@ -2,7 +2,7 @@
 
 Per comneçar el primer pas sera tindre una maquina client windows amb un disc principal on tindrem el sistema operatiu i despres un segon disc de 10 Gb en el qual farem la copia.
 
-![image](img/Tasca02_1.png)
+![image](img/Tasca02_2.png)
 
 
 Un cop fet això el seguent pas sera inicialitzar el disc, per fer això el primer pas sera inicar la maquina i obrir l'administrador de disc.
