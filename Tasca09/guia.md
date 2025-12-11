@@ -13,18 +13,18 @@ Crearàs un servidor NFS (NFSv3) i un client Linux que consumeixi els recursos c
 
 ---
 
-Per començar en aquesta guia hem de tindre 2 maquines, en aquest cas tindrem un ubuntu server i un zorin per simular el clinet.
+Per començar  aquesta guia hem d'instalar 2 maquines, un ubuntu server i un zorin per simular el client.
 
-Un cop que ja tenim les dues maquines instalades començarem configuran el servidor.
+Quan que ja tenim les dues maquines instalades començarem configurant el servidor.
 
-La primera comanda que farem sera per actualitzar els paquets.
+Primer de tot actualitzarem els paquets
 
 ```bash
 sudo apt update && sudo apt upgrade -y 
 ```
-Un cop que ja tenim actualitzat els paquets, el seguent pas sera començar amb la creació de l'estructura de carpetas, de grups i usuaris.
+Quan ja hem actualitzat els paquets, lo seguent sera començar amb la creació de l'estructura de carpetas, de grups i usuaris.
 
-El primer que farem sera crear els grups neccesaris, en aquest cas en demana que crem 2 grups, el primer devs i el segon admin
+El primer que farem sera crear els grups neccesaris, en aquest cas en demana que creem 2 grups, el primer devs i el segon admin
 
 Per crear aquest grups farem la seguent comanda 
 
@@ -37,13 +37,13 @@ groupadd admin
 ```
 
 
-Per comporbar que l'arxiu s'ha creat correctament farem servir el greep per buscar tant el grup devs com admin dins de l'arxiu /etc/groups, per fer-ho farem la seguent comanda
+Per comprobar que l'arxiu s'ha creat correctament farem servir el greep per buscar tant el grup devs com admin dins de l'arxiu /etc/groups, per fer-ho farem la seguent comanda
 
 ```bash
 grep devs /etc/group
 ```
 
-Per comporbar que l'arxiu s'ha creat correctament farem servir el greep per buscar tant el grup devs com admin dins de l'arxiu /etc/groups, per fer-ho farem la seguent comanda
+Per comprobar que l'arxiu s'ha creat correctament farem servir el greep per buscar tant el grup devs com admin dins de l'arxiu /etc/groups, per fer-ho farem la seguent comanda
 
 ```bash
 grep devs /etc/group
@@ -53,17 +53,17 @@ grep devs /etc/group
 grep admin /etc/group
 ```
 
-En la qual podrem veure que els grups d'han creat correctament
+Podem veure si els grups estan creats correctament
 
 ![image](img/T09_1.png)
 
-Un cop que ja tenim els grups creats el seguent pas sera crear l'usuari dev01 que formi part del grup devs, per fer això farem servir la seguent comanda
+Quan ja tenim els grups creats ara hem de fer  l'usuari dev01 que formi part del grup devs, per fer això farem servir la seguent comanda
 
 ```bash
 useradd -G devs -m -s /bin/bash dev01
 ```
 
-Tot seguit farem el mateix per l'usuari admin01, en la qual farem la seguent comanda
+Ara farem el mateix per l'usuari admin01, en la qual farem la seguent comanda
 
 ```bash
 useradd -G admin -m -s /bin/bash admin01
@@ -81,7 +81,7 @@ grep admin01 /etc/passwd
 
 ![image](img/T09_2.png)
 
-Un cop que ja hem creat els grups i els usuaris, el seguent pas sera crear el directori per als projectes de desenvolupament en la qual la ruta que ens demana és la seguent /srv/nfs/dev_projects, per crear les totes les carpetas d'una sola comanda farem el seguent:
+ Ara que ja hem creat els grups i els usuaris, el seguent  sera crear el directori per als projectes de desenvolupament en la qual la ruta que ens demana és la seguent /srv/nfs/dev_projects, per crear les totes les carpetas d'una sola comanda farem el seguent:
 
 ```bash
 mkdir /srv/nfs/dev_projects -p
@@ -116,7 +116,7 @@ chmod 770 /srv/nfs/dev_projects
 chmod 770 /srv/nfs/admin_tools
 ```
 
-Per comprobar que els permisos estan correctas farem ls -l per poder veure els permisos de cada carpeta
+Per comprobar que els permisos estan correctes farem ls -l per poder veure els permisos de cada carpeta
 
 ![image](img/T09_4.png)
 
@@ -276,7 +276,7 @@ Per poder fer això haurem de modificar l'arxiu /etc/exports i substituir la lin
 /srv/nfs/dev_projects 192.168.56.0/24(rw,sync,no_subtree_check)
 /srv/nfs/dev_projects 192.168.56.140(ro,sync,no_subtree_check)
 ```
-![Carpeta](img/19.png)
+![image](img/T09_19.png)
 
 Això ho fem per poder assignar permisos depened de la ip que tingui l'usuari
 
@@ -296,7 +296,7 @@ mkdir /mnt/dev_projects
 
 El seguent pas que farem sera modificar la nostre ip, en aquest cas probarem amb la ip ```192.168.56.128``` per poder fer això anirem a la configuració de xarxa i colocarem la ip manualment i muntarem el disc
 
-![Configuració de xarxa](img/20.png)
+![image](img/T09_20+.png)
 
 Un cop fet això si fem login l'usuari dev01 com que tenim una ip dins del rang que pot editar dins de la carpeta si que podrem crear arxius
 
