@@ -79,7 +79,7 @@ grep dev01 /etc/passwd
 grep admin01 /etc/passwd
 ```
 
-![imatge dels usuaris](img/2.png)
+![image](img/T09_2.png)
 
 Un cop que ja hem creat els grups i els usuaris, el seguent pas sera crear el directori per als projectes de desenvolupament en la qual la ruta que ens demana és la seguent /srv/nfs/dev_projects, per crear les totes les carpetas d'una sola comanda farem el seguent:
 
@@ -93,7 +93,7 @@ Un cop fet això crearem el directori per a les eines d'administració en la qua
 mkdir /srv/nfs/admin_tools
 ```
 
-![Creació de carpetas](img/3.png)
+![image](img/T09_3.png)
 Per ultim configurarem els permisos de les carpetas, en aquest cas seran els seguent.
 
 Chown per canviar la propietat de la carpeta
@@ -118,7 +118,7 @@ chmod 770 /srv/nfs/admin_tools
 
 Per comprobar que els permisos estan correctas farem ls -l per poder veure els permisos de cada carpeta
 
-![Permisos de la carpeta](img/4.png)
+![image](img/T09_4.png)
 
 Avans de continuar amb el servidor crearem els grups i usuaris dins de la maquina client, en aquest cas una maquina zorin
 
