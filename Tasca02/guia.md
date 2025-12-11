@@ -7,13 +7,15 @@ Per comneçar el primer pas sera tindre una maquina client windows amb un disc p
 
 Un cop fet això el seguent pas sera inicialitzar el disc, per fer això el primer pas sera inicar la maquina i obrir l'administrador de disc.
 
-![administrador de disc](img/2.png)
+![image](img/Tasca02_3.png)
+
 
 Un cop fet això el que farem sera crear un volum simple en el disc, per fer-ho hem de fer click dret sobre el disc i escollirem la opcio de "Nuevo volumen simple"
 
 Un cop fet això s'obrira una finestra en la qual unicament farem siguiente siguiente fins que tinguem el volum creat i es vegi tal i aixì
 
-![Crear volum simple](img/3.png)
+![image](img/Tasca02_4.png)
+
 
 El seguent pas sera instalar duplicati, per fer això anirem al seguent enllaç
 
@@ -21,78 +23,76 @@ El seguent pas sera instalar duplicati, per fer això anirem al seguent enllaç
 
 Instalarem la versio per el nostre equip, en aquest cas instalarem la versió per windows
 
-![Crear volum simple](img/4.png)
+![image](img/Tasca02_5.png)
 
 Un cop que tinguem instalat el archiu.exe l'executarem i farem siguiente siguiente, aceptant els termes neccesaris fins que tinguem el duplicati instalat correctament
 
-![Instalació duplicati](img/5.png)
+![image](img/Tasca02_6.png)
 
 Un cop instalat, s'obrira una pestanya en el nostre navegador en el qual ens demanara que escollim una constrasenya per fer servir duplicati.
 
 En la qual podem escollir qualsevol contrasenya ja que sera personal, important no olvidar-la
 
-![duplicati](img/6.png)
+![image](img/Tasca02_7.png)
 
 
 Un cop que ja tenim el duplicati, crearem alguns documents de proba per poder fer la copia de seguretat
 
-![Creació de documents](img/8.png)
+![image](img/Tasca02_8.png)
 
 El seguent pas sera configurar les copies de seguretat que voldrem, aixi que começarem escollint la opcio de backup add i add new backup,
 
 Un cop aqui haurem de colocar les dades de la nostra copia 
 
-![duplicati](img/7.png)
+![image](img/Tasca02_9.png)
 
 El seguent pas sera escollir on tindrem guardada la copia, en aquest cas la guardarem en el nostre cas la guardarem en el disc secundari
 
-![Escollir lloc](img/9.png)
+![image](img/Tasca02_10.png)
 
 Un cop fet això hem d'escollir quins documents volem fer la copia
-
-![Escollir documents](img/10.png)
+![image](img/Tasca02_11.png)
 
 Tot seguit haurem d'escollir cada quan de temps volem que és realitzi la copia, en aquest cas la farem cada 1 hora 
 
-![Escollir temps](img/11.png)
+![image](img/Tasca02_12.png)
 
 Un cop que arribem aqui escollirem les opcions que en demani i un cop fet, ja tindrem la nostra copia creada
 
-![opcions](img/12.png)
+![image](img/Tasca02_13.png)
 
 El proxim pas sera fer el mateix però amb l'unic canvi que farem la copia en el nuvol, en aquest cas farem servir el google drive, per fer-ho farem el seguent però unicament modificarem el seguent.
 
 El lloc en el qual guardarem la copia, en la qual haurem de vincular la conta, per fer això farem click a AuthID
 
-![googledrive](img/13.png)
+![image](img/Tasca02_14.png)
 
 L'altre cosa que haurem d'editar sera cada quan és fa la copia, en aquest cas sera cada dia a las 6 de la tarda
 
-![Horari](img/14.png)
+![image](img/Tasca02_15.png)
 
 Un cop fet aixo ja tindrem les dues copies creades
 
-![copies creades](img/15.png)
+![image](img/Tasca02_16.png)
 
 El seguent pas que farem sera borrar els documents de proba per poder comprobar que podem recuperar la copia correctament 
 
-![Carpeta documents](img/16.png)
-
+![image](img/Tasca02_17.png)
 Un cop que ja hem borrat els documents, el seguent pas sera recuperar la copia, per poder fer això anirem a "Restores" i farem click a "Start"
 
 Escollirem la copia que volem restaurar, en aquest cas proba
 
-![Escollir copia](img/17.png)
+![image](img/Tasca02_18.png)
 
 escollirem els fitxers que volem restaurar, en aquest cas la carpeta documents
 
-![Escollir documents](img/18.png)
+![image](img/Tasca02_19.png)
 
 Farem siguiente siguiente i un cop fet això ja tindrem feta la restauració 
 
-![Restauració feta](img/19.png)
+![image](img/Tasca02_20.png)
 
-![Restauració feta](img/20.png)
+![image](img/Tasca_21_3.png)
 
 Per poder restaurar la copia que hem fet a google drive ho farem igual però selecionarem l'altre copia
 
@@ -118,7 +118,7 @@ Un cop que ja tenim el disc, el primer pas sera donar-li un format, li donarem e
 mkdir /media/backup 
 ```
 
-![carpeta de backup](img/21.png)
+![image](img/Tasca02_22.png)
 
 Un cop fet això haurem de donar-li format al disc, això ho farem amb l'eina fdisk, per tant el primer pas sera 
 
@@ -131,7 +131,7 @@ Un cop fet això farem fdisk -l per veure el disc que tenim
 fdisk -l
 ```
 
-![Comanda fdisk -l](img/22.png)
+![image](img/Tasca02_23.png)
 
 Podem veure que el segon disc esta, per tant el seguent pas sera crear el seu volum, per fer això farem servir la comanda pvcreate, per poder fer servir aquesta comanda primer haurem d'instalar lvm2 
 
@@ -145,7 +145,7 @@ Un cop fet això ja podrem crear el volum en aquest cas sera amb la seguent coma
 pvcreate /dev/sdb
 ```
 
-![Crear el volum](img/23.png)
+![image](img/Tasca02_24.png)
 
 Un cop que ja tenim el volum muntat el seguent pas sera formategar-lo amb la seguent comanda
 
@@ -153,14 +153,14 @@ Un cop que ja tenim el volum muntat el seguent pas sera formategar-lo amb la seg
 mkfs.xfs -f /dev/sdb
 ```
 
-![Formategar el volum](img/24.png)
+![image](img/Tasca02_25.png)
 
 Per ultim tocara muntar el disc a la carpeta que hem crear previament, per fer axò farem la seguent comanda
 
 ```bash
 mount /dev/sdb /media/backup
 ```
-![Muntar el disc](img/25.png)
+![image](img/Tasca02_26.png)
 
 Un cop que ja tenim el disc muntat el seguent pas sera instalar Duplicity
 
@@ -179,8 +179,8 @@ useradd -m -s /bin/bash user1
 ```bash
 useradd -m -s /bin/bash user2
 ```
-![Crear usuaris](img/26.png)
-![Comprobar usuaris](img/27.png)
+![image](img/Tasca02_27.png)
+![image](img/Tasca02_28.png)
 
 ```bash
 fallocate -l 10MB file1
@@ -188,7 +188,7 @@ fallocate -l 10MB file2
 fallocate -l 10MB file3
 fallocate -l 10MB file4
 ```
-![Comprobar arxius](img/28.png)
+![image](img/Tasca02_29.png)
 
 
 Un cop que ja tenim els arxius de prova creats els seguent pas sera fer la copia de seguretat, això ho farem amb el duplicity
