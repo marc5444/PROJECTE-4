@@ -33,66 +33,66 @@ Un cop instalat, s'obrira una pestanya en el nostre navegador en el qual ens dem
 
 En la qual podem escollir qualsevol contrasenya ja que sera personal, important no olvidar-la
 
-![image](img/Tasca02_7.png)
 
+![image](img/Tasca02_8.png)
 
 Un cop que ja tenim el duplicati, crearem alguns documents de proba per poder fer la copia de seguretat
 
-![image](img/Tasca02_8.png)
+![image](img/Tasca02_9.png)
 
 El seguent pas sera configurar les copies de seguretat que voldrem, aixi que começarem escollint la opcio de backup add i add new backup,
 
 Un cop aqui haurem de colocar les dades de la nostra copia 
 
-![image](img/Tasca02_9.png)
+![image](img/Tasca02_10.png)
 
 El seguent pas sera escollir on tindrem guardada la copia, en aquest cas la guardarem en el nostre cas la guardarem en el disc secundari
 
-![image](img/Tasca02_10.png)
+![image](img/Tasca02_11.png)
 
 Un cop fet això hem d'escollir quins documents volem fer la copia
-![image](img/Tasca02_11.png)
+![image](img/Tasca02_12.png)
 
 Tot seguit haurem d'escollir cada quan de temps volem que és realitzi la copia, en aquest cas la farem cada 1 hora 
 
-![image](img/Tasca02_12.png)
+![image](img/Tasca02_13.png)
 
 Un cop que arribem aqui escollirem les opcions que en demani i un cop fet, ja tindrem la nostra copia creada
 
-![image](img/Tasca02_13.png)
+![image](img/Tasca02_14.png)
 
 El proxim pas sera fer el mateix però amb l'unic canvi que farem la copia en el nuvol, en aquest cas farem servir el google drive, per fer-ho farem el seguent però unicament modificarem el seguent.
 
 El lloc en el qual guardarem la copia, en la qual haurem de vincular la conta, per fer això farem click a AuthID
 
-![image](img/Tasca02_14.png)
+![image](img/Tasca02_15.png)
 
 L'altre cosa que haurem d'editar sera cada quan és fa la copia, en aquest cas sera cada dia a las 6 de la tarda
 
-![image](img/Tasca02_15.png)
+![image](img/Tasca02_16.png)
 
 Un cop fet aixo ja tindrem les dues copies creades
 
-![image](img/Tasca02_16.png)
+![image](img/Tasca02_17.png)
 
 El seguent pas que farem sera borrar els documents de proba per poder comprobar que podem recuperar la copia correctament 
 
-![image](img/Tasca02_17.png)
+![image](img/Tasca02_18.png)
 Un cop que ja hem borrat els documents, el seguent pas sera recuperar la copia, per poder fer això anirem a "Restores" i farem click a "Start"
 
 Escollirem la copia que volem restaurar, en aquest cas proba
 
-![image](img/Tasca02_18.png)
+![image](img/Tasca02_19.png)
 
 escollirem els fitxers que volem restaurar, en aquest cas la carpeta documents
 
-![image](img/Tasca02_19.png)
+![image](img/Tasca02_20.png)
 
 Farem siguiente siguiente i un cop fet això ja tindrem feta la restauració 
 
-![image](img/Tasca02_20.png)
+![image](img/Tasca02_21.png)
 
-![image](img/Tasca_21_3.png)
+![image](img/Tasca02_22.png)
 
 Per poder restaurar la copia que hem fet a google drive ho farem igual però selecionarem l'altre copia
 
@@ -118,7 +118,7 @@ Un cop que ja tenim el disc, el primer pas sera donar-li un format, li donarem e
 mkdir /media/backup 
 ```
 
-![image](img/Tasca02_22.png)
+![image](img/Tasca02_23.png)
 
 Un cop fet això haurem de donar-li format al disc, això ho farem amb l'eina fdisk, per tant el primer pas sera 
 
@@ -131,7 +131,7 @@ Un cop fet això farem fdisk -l per veure el disc que tenim
 fdisk -l
 ```
 
-![image](img/Tasca02_23.png)
+![image](img/Tasca02_24.png)
 
 Podem veure que el segon disc esta, per tant el seguent pas sera crear el seu volum, per fer això farem servir la comanda pvcreate, per poder fer servir aquesta comanda primer haurem d'instalar lvm2 
 
@@ -145,7 +145,7 @@ Un cop fet això ja podrem crear el volum en aquest cas sera amb la seguent coma
 pvcreate /dev/sdb
 ```
 
-![image](img/Tasca02_24.png)
+![image](img/Tasca02_25.png)
 
 Un cop que ja tenim el volum muntat el seguent pas sera formategar-lo amb la seguent comanda
 
@@ -153,14 +153,14 @@ Un cop que ja tenim el volum muntat el seguent pas sera formategar-lo amb la seg
 mkfs.xfs -f /dev/sdb
 ```
 
-![image](img/Tasca02_25.png)
+![image](img/Tasca02_26.png)
 
 Per ultim tocara muntar el disc a la carpeta que hem crear previament, per fer axò farem la seguent comanda
 
 ```bash
 mount /dev/sdb /media/backup
 ```
-![image](img/Tasca02_26.png)
+![image](img/Tasca02_27.png)
 
 Un cop que ja tenim el disc muntat el seguent pas sera instalar Duplicity
 
@@ -179,8 +179,8 @@ useradd -m -s /bin/bash user1
 ```bash
 useradd -m -s /bin/bash user2
 ```
-![image](img/Tasca02_27.png)
 ![image](img/Tasca02_28.png)
+![image](img/Tasca02_29.png)
 
 ```bash
 fallocate -l 10MB file1
@@ -188,7 +188,7 @@ fallocate -l 10MB file2
 fallocate -l 10MB file3
 fallocate -l 10MB file4
 ```
-![image](img/Tasca02_29.png)
+![image](img/Tasca02_30.png)
 
 
 Un cop que ja tenim els arxius de prova creats els seguent pas sera fer la copia de seguretat, això ho farem amb el duplicity
