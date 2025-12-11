@@ -55,7 +55,7 @@ grep admin /etc/group
 
 En la qual podrem veure que els grups d'han creat correctament
 
-![imatge dels grups](img/1.png)
+![image](img/T09_1.png)
 
 Un cop que ja tenim els grups creats el seguent pas sera crear l'usuari dev01 que formi part del grup devs, per fer això farem servir la seguent comanda
 
