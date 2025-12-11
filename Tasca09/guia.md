@@ -144,7 +144,7 @@ Per comprobar que s'ha instalat correctament podem fer un systemctl status
 systemctl status nfs-kernel-server
 ```
 
-![status](img/8.png)
+![image](img/T09_8.png)
 
 Per començar editarem l'arxiu /etc/exports per poder decidir quins arxius volem exportar, en aquest cas volem exporta tota la carpeta /srv/nfs
 
@@ -153,8 +153,7 @@ Afegirem una linia adicional al final del arxiu, en aquest cas sera la seguent
 ```bash
 /srv/nfs *(rw,sync,no_subtree_check)
 ```
-
-![arxiu de configuració](img/9.png)
+![image](img/T09_9.png)
 
 Per poder aplicar el canvis haurem de reinciar el servei amb la comanda
 
@@ -170,14 +169,14 @@ exportfs -u
 ```
 Amb la qual podrem veure quins arxius es poden exportar
 
-![comanda](img/10.png)
+![image](img/T09_10.png)
 
 Tambe podem fer la seguent comanda per veure des-de quin port treballa, en aquest cas ho fa amb el port 2049
 
 ```bash
 rpcinfo -p 192.168.56.101
 ```
-![comanda](img/11.png)
+![image](img/T09_11.png)
 
 Per poder comprobar en la maquina haurem d'instalar el paquet nfs-common, això ho farem amb la seguent comanda
 
@@ -193,7 +192,7 @@ En el meu cas sera la seguent comanda
 showmount -e 192.168.56.101
 ```
 
-![comanda](img/12.png)
+![image](img/T09_12.png)
 
 En la qual podem veure que la carpeta /srv/nfs
 
@@ -209,7 +208,7 @@ Previament ja hem exportat l'arxiu /srv/nfs per tant el seguent pas que hem de f
 mkdir /mnt/admin_tools 
 ```
 
-![Creació de la carpeta](img/13.png)
+![image](img/T09_13.png)
 
 Un cop que tenim creada la carpeta, el seguent pas sera muntar el recurs, això ho farem amb la comanda mount 
 
@@ -219,15 +218,15 @@ mount -t nfs 192.168.56.101:/srv/nfs/admin_tools /mnt/admin_tools
 
 Podrem veure no podem crear cap arxiu ja que no tenim els pemisos ja que el root de la maquina client i el root del servidor no es el mateix
 
-![Carpeta](img/14.png)
+![image](img/T09_14.png)
 
 Mentre que si intentem crear un arxiu amb l'usuari admin si que podrem, ja que aquest usuari si que te permisos en aquesta carpeta
 
-![Carpeta](img/15.png)
+![image](img/T09_15.png)
 
 Podem veure que l'arxiu que hem creat es propietat de admin01
 
-![Carpeta](img/17.png)
+![image](img/T09_16.png)
 
 A continuació ensenyare com fer per poder crear arxius amb root
 
@@ -259,9 +258,9 @@ mount -t nfs 192.168.56.101:/srv/nfs/admin_tools /mnt/admin_tools
 
 Un cop fet això podrem crear un now arxiu, per exemple en aquest cas he creat una arxiu anomenat file2
 
-![Carpeta](img/16.png)
+![image](img/T09_17.png)
 
-![Carpeta](img/18.png)
+![image](img/T09_18.png)
 
 Això a causa de que hem modificat l'arxiu /etc/exports fent que el root de la maquina fisica sigui el mateix que el root del servidor, per tant tenim total llibertat 
 
