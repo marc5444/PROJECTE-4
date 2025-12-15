@@ -300,19 +300,23 @@ El seguent pas que farem sera modificar la nostre ip, en aquest cas probarem amb
 
 Un cop fet això si fem login l'usuari dev01 com que tenim una ip dins del rang que pot editar dins de la carpeta si que podrem crear arxius
 
-![Creació d'arxiu](img/22.png)
+![image](img/T09_21.png)
+
 
 Mentre que canviem la ip ```192.168.56.140``` podrem observar que no podem editar els arxius però si que podem veure que hi ha a la carpeta, haurem de tornar a desmuntar i muntar el disc
 
-![Canvi d'IP](img/23.png)
+![image](img/T09_22.png)
+
 
 Podrem veure que podem accedir a la carpeta i veure que hi ha dins però no podrem modificar el contigut ja que nomes tenim permisos de lectura
 
-![permisos](img/24.png)
+![image](img/T09_23.png)
+
 
 Ara per ultim farem login amb l'usuari admin01 i intentarem crear un arxiu en la carpeta dev_projects
 
-![permisos](img/25.png)
+![image](img/T09_24.png)
+
 
 Podem veure que no podem crear cap arxius dins de la carpeta dev_projects ja que no tenim els permisos neccesaris ja que l'usuari admin01 no forma part del grup dev01
 
