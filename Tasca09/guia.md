@@ -296,7 +296,7 @@ mkdir /mnt/dev_projects
 
 El seguent pas que farem sera modificar la nostre ip, en aquest cas probarem amb la ip ```192.168.56.128``` per poder fer això anirem a la configuració de xarxa i colocarem la ip manualment i muntarem el disc
 
-![image](img/T09_20+.png)
+![image](img/T09_20.png)
 
 Un cop fet això si fem login l'usuari dev01 com que tenim una ip dins del rang que pot editar dins de la carpeta si que podrem crear arxius
 
