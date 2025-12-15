@@ -210,42 +210,42 @@ mkdir /mnt/admin_tools
 
 ![image](img/T09_13.png)
 
-Un cop que tenim creada la carpeta, el seguent pas sera muntar el recurs, això ho farem amb la comanda mount 
+Quan ja tenim creada la carpeta, seguidament muntarem el recurs, això ho farem amb la comanda mount 
 
 ```bash
 mount -t nfs 192.168.56.101:/srv/nfs/admin_tools /mnt/admin_tools
 ```
 
-Podrem veure no podem crear cap arxiu ja que no tenim els pemisos ja que el root de la maquina client i el root del servidor no es el mateix
+Nomes podem veure no podem crear cap arxiu ja que no tenim els pemisos ja que el root de la maquina client i el root del servidor no es el mateix
 
 ![image](img/T09_14.png)
 
-Mentre que si intentem crear un arxiu amb l'usuari admin si que podrem, ja que aquest usuari si que te permisos en aquesta carpeta
+En canvi si intentem crear un arxiu amb l'usuari admin si que es podria realitzar, perque aquest usuari si que te permisos en aquesta carpeta
 
 ![image](img/T09_15.png)
 
-Podem veure que l'arxiu que hem creat es propietat de admin01
+Com veiem l'arxiu que hem creat es propietat de admin01
 
 ![image](img/T09_16.png)
 
-A continuació ensenyare com fer per poder crear arxius amb root
+Ara us mostrare com fer per poder crear arxius amb root
 
 Prova 2 (La Solució)
 
-Per començar haurem d'editar l'arxiu /etc/exports en el qual substituirem la linia que hem escrit previament per les seguents.
+Primer haurem d'editar l'arxiu /etc/exports  hem de  substituir la linia que hem escrit previament per les seguents.
 
 ```bash
 /srv/nfs/admin_tools *(rw,sync,no_subtree_check,no_root_squash)
 /srv/nfs/dev_projects *(rw,sync,no_subtree_check)
 ```
 
-Un cop fet això reiniciem el servei un altre cop amb la comanda 
+Quan hem fet això hem de reiniciar el servei un altre cop amb la comanda 
 
 ```bash
 systemctl restart nfs-kernel-server
 ```
 
-A continuació haurem de desmuntar i muntar un altre cop el recurs, en el meu cas la comanda per desmuntar sera 
+Ara hem de desmuntar i muntar un altre cop el recurs, la comanda per desumntar es
 
 ```bash
 umount -t nfs 192.168.56.101:/srv/nfs/admin_tools /mnt/admin_tools
@@ -256,7 +256,7 @@ I per muntar
 mount -t nfs 192.168.56.101:/srv/nfs/admin_tools /mnt/admin_tools
 ```
 
-Un cop fet això podrem crear un now arxiu, per exemple en aquest cas he creat una arxiu anomenat file2
+Quan hem fet això ja podem crear un nou arxiu,en aquest cas he creat una arxiu anomenat file2
 
 ![image](img/T09_17.png)
 
@@ -268,9 +268,9 @@ Això a causa de que hem modificat l'arxiu /etc/exports fent que el root de la m
 
 # Fase 4: L'Exportació de Desenvolupament (Permisos rw vs ro)
 
-A continuació el client ens demana el seguent la xarxa d'administració (p.ex., 192.168.56.0/24) hi pugui escriure, però que la xarxa de consultors (p.ex., 192.168.56.100) només pugui llegir.
+Ara el client ens diu el seguent la xarxa d'administració (p.ex., 192.168.56.0/24) hi pugui escriure, però que la xarxa de consultors (p.ex., 192.168.56.100) només pugui llegir.
 
-Per poder fer això haurem de modificar l'arxiu /etc/exports i substituir la linia "/srv/nfs/dev_projects *(rw,sync,no_subtree_check)" per les seguents 
+Per poder fer això hauriem de modificar l'arxiu /etc/exports i substituir la linia "/srv/nfs/dev_projects *(rw,sync,no_subtree_check)" per les seguents 
 
 ```bash
 /srv/nfs/dev_projects 192.168.56.0/24(rw,sync,no_subtree_check)
@@ -278,77 +278,75 @@ Per poder fer això haurem de modificar l'arxiu /etc/exports i substituir la lin
 ```
 ![image](img/T09_19.png)
 
-Això ho fem per poder assignar permisos depened de la ip que tingui l'usuari
+Això ho fem degut a que  per poder assignar permisos depenen de la ip que tingui l'usuari
 
-Tot seguit reinciem el servei amb la comanda 
+Ara hem  reinciar el servei amb la comanda 
 
 ```bash
 systemctl restart nfs-kernel-server
 ```
+Quan fem aixo  hauriem de muntar el disc dev_projects per comprobacions
 
-Un cop fet això haurem de muntar el disc dev_projects per comprobar que tot funciona correctament.
-
-El primer pas sera crear la carpeta amb la seguent comanda
+Primer crearem la carpeta amb aquesta comanda
 
 ```bash
 mkdir /mnt/dev_projects
 ```
 
-El seguent pas que farem sera modificar la nostre ip, en aquest cas probarem amb la ip ```192.168.56.128``` per poder fer això anirem a la configuració de xarxa i colocarem la ip manualment i muntarem el disc
+Seguidament modificarem la nostre ip, posarem la ip ```192.168.56.128``` per poder fer això anirem a la configuració de xarxa i colocarem la ip manualment i muntarem el disc
 
 ![image](img/T09_20.png)
 
-Un cop fet això si fem login l'usuari dev01 com que tenim una ip dins del rang que pot editar dins de la carpeta si que podrem crear arxius
+Quan hem fet això si posem el login l'usuari dev01 degut a que tenim una ip dins del rang que pot editar dins de la carpeta si que podrem crear arxius
 
 ![image](img/T09_21.png)
 
 
-Mentre que canviem la ip ```192.168.56.140``` podrem observar que no podem editar els arxius però si que podem veure que hi ha a la carpeta, haurem de tornar a desmuntar i muntar el disc
+De mentres que canviem la ip ```192.168.56.140``` podem veure que no es pot editar els arxius però en canvi podem veure que hi ha a la carpeta, ara hem de tornar a desmuntar i muntar el disc
 
 ![image](img/T09_22.png)
 
 
-Podrem veure que podem accedir a la carpeta i veure que hi ha dins però no podrem modificar el contigut ja que nomes tenim permisos de lectura
+Podem accedir a la carpeta i veure que hi ha dins però no podrem modificar el contigut perque nomes tenim permisos de lectura
 
 ![image](img/T09_23.png)
 
 
-Ara per ultim farem login amb l'usuari admin01 i intentarem crear un arxiu en la carpeta dev_projects
+Per finalitzar hem de fer login amb l'usuari admin01 i seguidament intentar crear un arxiu en la carpeta dev_projects
 
 ![image](img/T09_24.png)
 
 
-Podem veure que no podem crear cap arxius dins de la carpeta dev_projects ja que no tenim els permisos neccesaris ja que l'usuari admin01 no forma part del grup dev01
+ Com es veu no podem crear ningun arxiu dintre de la carpeta dev_projects perque no tenim els permisos principals, degut a que l'usuari admin01 no forma part del grup dev01
 
 ---
 
 # Fase 5: Muntatge Automàtic amb /etc/fstab
 
+Seguidament hem de cambiar l'arxiu /etc/fstab per aixi configurar que els recursos compartits no es tinguin que muntar de nou
 
-Ara per últim modificarem l'arxiu /etc/fstab per poder configurar que els recursos compartits no es hagin de muntar cada vegada que entrem.
-
-Per començar, farem la següent comanda per entrar a l'arxiu
+El proxim pas es, fer la següent comanda per poder accedir a l'arxiu
 
 ```bash
 sudo nano /etc/fstab
 ```
 
-En el qual haurem d'afegir aquestes dues lines al final
+hem d'afegir aquestes dues lines al final
 
 ```bash
-192.168.56.101:/srv/nfs/admin_tools /mnt/admin_tools nfs defaults 0 0
-192.168.56.101:/srv/nfs/dev_projects /mnt/dev_projects nfs defaults 0 0
+192.168.56.103:/srv/nfs/admin_tools /mnt/admin_tools nfs defaults 0 0
+192.168.56.103:/srv/nfs/dev_projects /mnt/dev_projects nfs defaults 0 0
 ```
-![arxiu](img/26.png)
+![image](img/T09_25.png)
 
-Un cop fet això reiniciem la màquina i confirmem que discos s'han muntat correctament 
+Quan estigui fet reiniciem la màquina i confirmem que discos s'han muntat correctament 
 
-![discos muntats](img/27.png)
+![image](img/T09_26.png)
 
 ---
 
 # Conclusió
 
-Per poder millorar aquest producte podríem millorar el següent, per exemple un dels problemes és que s'han de crear els usuaris i grups al servidor i a la màquina client, això no és òptim, ja que en un entorn real en el qual podrien haver més de 20 ordinadors de part del client. Basicament seria repetir el mateix pas 21 vegades (20 pels clients i 1 pel servidor)
+Per millorar aquest producte es podrien canviar alguns aspectes. Un dels principals problemes és que els usuaris i els grups s’han de crear tant al servidor com a cada ordinador client, cosa que no és pràctica. En un entorn real amb més de 20 ordinadors, això obligaria a repetir el mateix procés moltes vegades.
 
-Una solució real per aquest problema seria centralitzar les dades dels usuaris i grups en únic lloc com per exemple LDAP així per evitar feina innecessària.
+Una possible solució seria tenir els usuaris i grups en un sol lloc, per exemple utilitzant LDAP. Així s’evitaria fer la mateixa feina una i altra vegada i la gestió seria molt més senzilla.
