@@ -219,3 +219,100 @@ duplicity restore file:///media/backup/ /home/user/copia
 ![Copia feta](img/32.png)
 
 A continuació farem una copia incremental, per començar crearem un arxiu de 4mb
+Per començar farem l'arxiu de prova
+
+```bash
+fallocate -l 4MB file5
+```
+
+un cop fet això tornem a fer la copia amb la seguent comanda
+
+```bash
+duplicity /home file:///media/backup/
+```
+
+Cal dir que en aquest cas no te la opcio full perque és una copia incremental
+
+![Copia feta](img/33.png)
+
+El seguent pas que farems sera fer un script perque les copies és fagin automaticament.
+
+El primer pas que haurem de fer sera desmuntar el disc, això ho farem amb la seguent comanda 
+
+```bash
+umount /media/backup
+```
+
+El seguent pas sera crear l'script, això ho farem en un nou arxiu que anomanarem  ```fullbackup.sh```
+
+Un cop que el tinguem creat escriurem el seguent:
+
+```bash
+!/bin/bash
+
+export PASSPHRASE="usuariusuari1234"
+
+mount /dev/sdb /media/backup
+
+duplicity full /home file:///media/backup/homebackup
+
+umount /media/backup
+```
+
+Això sera perque per si sol al principi monti el disc fagi la copia i al acabar la copia desmonti el disc, aixi asseguran que el disc unicament estara montat durant el moment de fer la copia
+
+Un cop fet això haurem de donar permisos de execusió a l'arxiu
+
+```bash
+chmod +x fullbackup.sh
+```
+
+![Donar permisos](img/34.png)
+
+El seguent pas sera modificar l'arxiu crontab per configurar que l'script s'executi cada diumenge a les 23:00
+
+Per arribar aquest arxiu farem la seguent comanda
+
+```bash
+crontab -e
+```
+
+Un cop dins afegirem aquesta linia 
+
+```bash
+0 23 * * 0 /home/usuari/fullbackup.sh
+```
+
+![Donar permisos](img/35.png)
+
+A continuació farem l'script de copia incremental, per començar crearem l'arxiu anomenat ```incrementalbackup.sh```
+
+Un cop dins escriurem el seguent 
+
+```bash
+!/bin/bash
+
+export PASSPHRASE="usuariusuari1234"
+
+mount /dev/sdb /media/backup
+
+duplicity incremental /home file:///media/backup/homebackup
+
+umount /media/backup
+```
+
+Un cop fet això tornem a donar-li permisos 
+
+```bash
+chmod +x fullbackup.sh
+```
+
+Per ultim tornem a editar l'arxiu crontab en el qual afegirem la seguent linia
+
+```bash
+0 23 * * 1-6 /home/usuari/incrementalbackup.sh
+```
+
+Quedant algo aixì
+
+![Donar permisos](img/36.png)
