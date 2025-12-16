@@ -200,15 +200,14 @@ duplicity full /home/user file:///media/backup/
 ```
 En el moment en que ens demana el passphrase podem escollir el que nosaltres volguem, ja que és una prova en el meu cas he escollit copia
 
-![Fer la copia](img/29.png)
+![image](img/Tasca02_31.png)
 
 Podem veure que la copia s'ha creat correctament en el disc secundari, això amb la comanda ls
 
-![veure la copia](img/30.png)
-
+![image](img/Tasca02_32.png)
 Un cop fet això el seguent pas sera esborrar els arxius i comprobar que funcionen correctament
 
-![Esborrar arxius](img/31.png)
+![image](img/Tasca02_33.png)
 
 Un cop que ja no estan els arxius farem servir la copia per recuperar-los, en aquest cas guardarem la copia dins d'una carpeta que es diu copia dins de la carpeta ```/home/user``` això ho farem amb la seguent comanda:
 
@@ -216,7 +215,7 @@ Un cop que ja no estan els arxius farem servir la copia per recuperar-los, en aq
 duplicity restore file:///media/backup/ /home/user/copia
 ```
 
-![Copia feta](img/32.png)
+![image](img/Tasca02_34.png)
 
 A continuació farem una copia incremental, per començar crearem un arxiu de 4mb
 Per començar farem l'arxiu de prova
@@ -233,7 +232,7 @@ duplicity /home file:///media/backup/
 
 Cal dir que en aquest cas no te la opcio full perque és una copia incremental
 
-![Copia feta](img/33.png)
+![image](img/Tasca02_35.png)
 
 El seguent pas que farems sera fer un script perque les copies és fagin automaticament.
 
@@ -267,7 +266,7 @@ Un cop fet això haurem de donar permisos de execusió a l'arxiu
 chmod +x fullbackup.sh
 ```
 
-![Donar permisos](img/34.png)
+![image](img/Tasca02_36.png)
 
 El seguent pas sera modificar l'arxiu crontab per configurar que l'script s'executi cada diumenge a les 23:00
 
@@ -283,7 +282,7 @@ Un cop dins afegirem aquesta linia
 0 23 * * 0 /home/usuari/fullbackup.sh
 ```
 
-![Donar permisos](img/35.png)
+![image](img/Tasca02_37.png)
 
 A continuació farem l'script de copia incremental, per començar crearem l'arxiu anomenat ```incrementalbackup.sh```
 
@@ -315,4 +314,4 @@ Per ultim tornem a editar l'arxiu crontab en el qual afegirem la seguent linia
 
 Quedant algo aixì
 
-![Donar permisos](img/36.png)
+![image](img/Tasca02_38.png)
