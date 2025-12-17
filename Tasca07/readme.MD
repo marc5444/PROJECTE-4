@@ -1,4 +1,4 @@
-# Tasca: Eina d’assistència remota per a Helpdesk (EverPia)
+# Tasca07: Eina d’assistència remota per a Helpdesk (EverPia)
 
 OBJECTIU
 --------
