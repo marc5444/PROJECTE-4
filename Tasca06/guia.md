@@ -60,10 +60,6 @@
 ![image](./img/12.png)
 
 
-**Li diem que sí a la Advertencia**
-
-![image](./img/13.png)
-
 
 **Posem credencials**
 
