@@ -2,7 +2,7 @@
 
 **Primer de tot a la nostra màquina Windows obrirem Configuración de Escritorio Remoto**
 
-![image](./img/1.png)
+![image](img/Tasca02_2.png)
 
 
 **Activem l'opció de Escritorio Remoto**
