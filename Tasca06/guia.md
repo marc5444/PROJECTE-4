@@ -1,67 +1,67 @@
 ## TASCA 06
 
-**Primer de tot a la nostra màquina Windows obrirem Configuración de Escritorio Remoto**
+**El primer pas sera anar a la nostra maquina windows i obrir la configuració de escriptori remot**
 
 ![image](img/T06_1.png)
 
 
-**Activem l'opció de Escritorio Remoto**
+**Seguidament ara hem d'activar l'opció de Escritorio Remoto**
 
 ![image](img/T06_2.png)
-## Ara Configurarem la màquina Zorin
+## Configuració maquina zorin
 
-**Haurem d'anar a configuració i remote desktop**
+**Hem d'anar a configuració i despres a remote desktop**
 
 ![image](img/T06_3.png)
 
 
-**Activem l'opció de Desktop Sharing i Remote Control**
+**Ara hem d'activar l'opció de Desktop Sharing i Remote Control**
 
 ![image](img/T06_4.png)
 
-**També canviem la contrasenya**
+**Hem de substituir la contrasenya que posa per defecte**
 
 ![image](img/T06_5.png)
 
 
-**A la màquina Windows obrirem Conexion a Escritorio Remoto**
+**Ara cambiem a la màquina Windows i hem d'obrir l'apartat de Conexion a Escritorio Remoto**
 
 ![image](img/T06_6.png)
 
-**Posarem la IP de la màquina Zorin**
+**Obrim terminal de la maquina zorin i posem:ip a i despres posem la posem a la maquina windows**
 
 ![image](img/T06_7.png)
 
 
-**Posarem les credencials**
+**Posem les credencials**
 
 ![image](img/T06_8.png)
 
-**A aquesta advertencia li direm que si**
+**Acceptem l'advertencia**
 
 ![image](img/T06_9.png)
 
-**Aqui veiem com estem ja connectats**
+**Com veiem ja estem conectats a la maquina**
 
 ![image](img/T06_10.png)
 
 
-## Ara ens connectem desde la màquina Zorin a Windows
+## Ara ho farem a la inversa  ens hem de connectar desde la màquina Zorin a Windows
 
-**Obrirem Remmina**
+**Busquem rommina i l'obrim**
 
 ![image](img/T06_11.png)
 
-**Posem la IP de la màquina Windows**
+**Busquem ip a la maquina windows i introduim la ip**
 
 ![image](img/T06_12.png)
 
 
-**Posem credencials**
+**Posem les credencials**
 
 ![image](img/T06_13.png)
 
 
-**I ja estarem a l'escritori de Windows**
+**Com es veu ja estariem a l'escritori de Windows**
 
 ![image](img/T06_14.png)
