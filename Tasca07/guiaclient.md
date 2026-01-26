@@ -27,8 +27,8 @@ Aquesta guia mostra com utilitzar **AnyDesk** per rebre assistència remota. Inc
 
 **Un cop li diem el tècnic es conectarà a nosaltres i ens surtirà el següent avís, un cop ens assegurem de que és la persona que volem ho acceptem**
 
-![image](./img/19.png)
+![image](./img/21.png)
 
 **Ara ja el tècinc tindría accés al nostre ordinador**
 
-![image](./img/20.png)
+![image](./img/22.png)
