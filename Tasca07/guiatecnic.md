@@ -21,30 +21,30 @@ Aquesta guia mostra com utilitzar **AnyDesk** des del punt de vista del tècnic 
 
 **Li donarem a instal·lar**
 
-![image](./img/5.png)
+![image](./img/6.png)
 
 
 **Per continuar haurem de posar el codig del client a dalt de la pantalla**
 
-![image](./img/6.png)
+![image](./img/7.png)
 
 **Haurem d'esperar a que el client accepti la petició, quan l'accepti ja estariem dins**
 
-![image](./img/7.png)
+![image](./img/8.png)
 
 **Anirem al següent icono de la pantalla a dalt a la dreta per fer una transferència d'arxius**
 
-![image](./img/8.png)
+![image](./img/9.png)
 
 **Creem un arxiu a l'ordinador del tècnic i ho podem passar al ordinador del client**
 
-![image](./img/9.png)
-
 ![image](./img/10.png)
+
+![image](./img/11.png)
 
 **També podem passar arxius del ordinador del client a l'ordinador del tècnic**
 
-![image](./img/13.png)
+![image](./img/12.png)
 
 **Podriem canviar de pantalles si el client té més d'una, en aquest cas no tenim més de una pero sortirien les pantalles que el client tingués**
 
