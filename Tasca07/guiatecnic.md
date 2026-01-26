@@ -48,6 +48,7 @@ Aquesta guia mostra com utilitzar **AnyDesk** des del punt de vista del tècnic 
 
 **Podriem canviar de pantalles si el client té més d'una, en aquest cas no tenim més de una pero sortirien les pantalles que el client tingués**
 
+![image](./img/13.png)
 ![image](./img/20.png)
 
 
