@@ -49,7 +49,7 @@ Aquesta guia mostra com utilitzar **AnyDesk** des del punt de vista del tècnic 
 **Podriem canviar de pantalles si el client té més d'una, en aquest cas no tenim més de una pero sortirien les pantalles que el client tingués**
 
 ![image](./img/13.png)
-![image](./img/20.png)
+![image](./img/21.png)
 
 
 ## Bones pràctiques de seguretat
@@ -66,4 +66,4 @@ Per finalitzar, cal seguir alguns protocols per garantir la **privacitat del cli
    Sempre hem de tancar la sessió un cop resolta la incidència. Això evita que continuem veient la pantalla del client sense el seu coneixement i garanteix que la connexió s’acabi correctament.  
    Per tancar la sessió, simplement cal fer clic a la **creu situada a la part superior esquerra** de la finestra de l’aplicació.
 
-![image](./img/21.png)
+![image](./img/22.png)
